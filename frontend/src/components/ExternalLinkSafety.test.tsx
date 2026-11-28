@@ -21,7 +21,7 @@ function expectProtectedLink(link: HTMLElement) {
 }
 
 function expectEveryBlankTargetIsSafe(container: HTMLElement) {
-  const blankLinks = Array.from(container.querySelectorAll('a[target="_blank"]'));
+  const blankLinks = Array.from(container.querySelectorAll<HTMLAnchorElement>('a[target="_blank"]'));
   expect(blankLinks.length).toBeGreaterThan(0);
   blankLinks.forEach(expectProtectedLink);
 }

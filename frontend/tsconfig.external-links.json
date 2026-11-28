@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["vitest/globals", "@testing-library/jest-dom", "vite/client"]
+  },
+  "include": [
+    "src/components/SafeExternalLink.tsx",
+    "src/components/ExternalLinkSafety.test.tsx",
+    "src/components/HtlcReceiptCard.tsx",
+    "src/pages/InvestorMode.tsx",
+    "src/test/setup.ts"
+  ],
+  "exclude": []
+}

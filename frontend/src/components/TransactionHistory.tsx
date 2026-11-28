@@ -423,17 +423,6 @@ export default function TransactionHistory({ ethAddress, stellarAddress }: Trans
         ))}
       </div>
 
-      {cursor && !isLoading && (
-        <button
-          onClick={refreshFromCoordinator}
-          disabled={isLoading}
-          className="button-hover-scale flex items-center justify-center gap-2 rounded-full border border-cyan-200/30 bg-cyan-200/[0.12] px-4 py-2 text-sm font-semibold text-cyan-50 shadow-[0_12px_34px_rgba(0,226,255,0.12)] transition hover:border-cyan-100/45 hover:bg-cyan-200/[0.18] disabled:opacity-60"
-        >
-          <ArrowRight className={`h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
-          Load More
-        </button>
-      )}
-
       <div className="min-h-0 space-y-3 overflow-y-auto overscroll-contain pr-1">
         {filteredTransactions.length === 0 ? (
           <div className="rounded-2xl border border-white/10 bg-white/[0.035] py-12 text-center">

@@ -14,6 +14,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
+    "test:external-links": "vitest run src/components/ExternalLinkSafety.test.tsx src/components/ExternalLinkSafety.transaction.test.tsx",
+    "typecheck:external-links": "tsc --noEmit -p tsconfig.external-links.json",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "clean": "rm -rf dist"
   },
